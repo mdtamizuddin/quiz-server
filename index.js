@@ -3,12 +3,12 @@ const mongoose = require('mongoose')
 const bodyparser = require('body-parser')
 const cors = require('cors')
 const app = express()
-
+require('dotenv').config()
 app.use(cors())
 app.use(bodyparser.json())
 
 const Port = process.env.PORT || 5000
-const uri = `mongodb+srv://linear-graphic:7tfQa8horkvX1ept@cluster0.fcnm4.mongodb.net/quiz?retryWrites=true&w=majority`
+const uri = process.env.DB_URI
 
 mongoose.connect(uri, {
     useNewUrlParser: true,
