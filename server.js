@@ -19,7 +19,7 @@ mongoose.connect(uri, {
 
 app.use('/quiz', require('./Routes/quizRouter'))
 app.get('/', (req, res) => {
-    res.status(200).send({ message: "Server is Running" })
+    res.send({ message: "Server is Running" })
 })
 
 app.listen(Port, () => {
