@@ -18,6 +18,7 @@ mongoose.connect(uri, {
     .catch((err) => console.log(err))
 
 app.use('/quiz', require('./Routes/quizRouter'))
+app.use('/sort', require('./Routes/sortRouter'))
 app.get('/', (req, res) => {
     res.send({ message: "Server is Running" })
 })
